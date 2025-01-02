@@ -185,21 +185,25 @@ layout: main
             <p class="mt-2">
               Fill out the form below and I’ll be in touch shortly.
             </p>
-            <div class="grid grid-cols-5 gap-8 mt-12">
-              <div class="col-span-5 lg:col-span-2">
-                <div class="flex flex-col gap-8">
-                  <input class="px-4 py-3 w-full text-brand-dark rounded-none border-2 border-brand" type="text" placeholder="Name">
-                  <input class="px-4 py-3 w-full text-brand-dark rounded-none border-2 border-brand" type="text" placeholder="Email Address">
-                  <input class="px-4 py-3 w-full text-brand-dark rounded-none border-2 border-brand" type="text" placeholder="Phone Number">
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="6c28f585-1073-46f0-a49f-b959212822bc">
+              <div class="grid grid-cols-5 gap-8 mt-12">
+                <div class="col-span-5 lg:col-span-2">
+                  <div class="flex flex-col gap-8">
+                    <input class="px-4 py-3 w-full text-brand-dark rounded-none border-2 border-brand" type="text" name="name" required placeholder="Name">
+                    <input class="px-4 py-3 w-full text-brand-dark rounded-none border-2 border-brand" type="text" name="email" required placeholder="Email Address">
+                    <input class="px-4 py-3 w-full text-brand-dark rounded-none border-2 border-brand" type="text" name="phone_number" required placeholder="Phone Number">
+                  </div>
+                </div>
+                <div class="col-span-5 lg:col-span-3">
+                  <textarea class="px-4 py-3 w-full h-full text-brand-dark rounded-none border-2 border-brand" name="message" required placeholder="Brief description of your project..."></textarea>
+                </div>
+                <div class="col-span-5 lg:col-span-2">
+                  <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                  <input class="uppercase bg-brand text-white rounded-none border-0 w-full lg:w-auto px-20 py-3" type="submit" value="Submit">
                 </div>
               </div>
-              <div class="col-span-5 lg:col-span-3">
-                <textarea class="px-4 py-3 w-full h-full text-brand-dark rounded-none border-2 border-brand" placeholder="Brief description of your project..."></textarea>
-              </div>
-              <div class="col-span-5 lg:col-span-2">
-                <input class="uppercase bg-brand text-white rounded-none border-0 w-full lg:w-auto px-20 py-3" type="submit" value="Submit">
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
