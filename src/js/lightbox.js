@@ -14,7 +14,7 @@ function showLightbox(src) {
 
   var img = document.createElement('img')
   img.src = src
-  img.style.cssText = 'z-index: 1; height: 60vh; width: auto; box-shadow: 0 .2rem 2rem #00000044;'
+  img.style.cssText = 'z-index: 1; max-height: 60vh; max-width: 90vw; box-shadow: 0 .2rem 2rem #00000044;'
   wrapper.appendChild(img)
 
   // Fade in wrapper.
